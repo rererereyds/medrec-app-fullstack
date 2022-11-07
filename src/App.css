@@ -1,0 +1,179 @@
+.App {
+  text-align: center;
+}
+
+/* FOR SPLASH SCREEN */
+
+.grid-container {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    ". . ."
+    ". splash-image ."
+    ". . .";
+}
+
+.splash-image {
+  overflow: hidden;
+  grid-area: splash-image;
+}
+
+.logo {
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-self: center;
+}
+
+/* FOR LOG IN */
+
+.images {
+  height: 100vh;
+}
+
+.container {
+  height: 93vh;
+}
+
+/* FOR NAVIGATION BAR */
+
+.font-style {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 650;
+  color: #2666CF;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar {
+  height: 10vh;
+  border-bottom: 2px solid #2666CF;
+}
+
+.nav-text {
+  color: #2666CF;
+}
+
+.nav-text:hover {
+  background-color: #2666CF;
+  color: azure;
+  cursor: pointer;
+}
+
+/* FOR HOME PAGE */
+
+.fill-container {
+  height: 15vh;
+}
+
+.card-container {
+  border: 2px solid #2666CF;
+}
+
+.time-date-style {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.time-date-container {
+  border-bottom: 2px solid #C9CCD5;
+}
+
+.reminder-text {
+  text-align: left;
+  line-height: normal;
+  font-size: small;
+}
+
+.reminder-container {
+  height: 60vh;
+  box-shadow: 0px 0px 0px #4C4C6D;
+  border-radius: 5px;
+  animation-name: reminder-container;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes reminder-container {
+  from {box-shadow: 0px 0px 0px #4C4C6D;}
+  to {box-shadow: 0px 0px 5px #4C4C6D;}
+}
+
+.footer-container {
+  background-color: #9BA4B4;
+  height: 8vh;
+}
+
+.footer-text {
+  font-size: 12px;
+}
+
+.homepage-body {
+  margin: 0;
+  padding: 0;
+}
+
+.compliance-text {
+  text-align: center;
+  line-height: normal;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.red-icon-hover:hover {
+  color: white;
+}
+
+/* FOR SHOW USERS */
+
+.user-container {
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.text-limit {
+  width: 100%;
+  height: 30px;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  margin-left: 7px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.title-container {
+  background-color: #ABD9FF;
+  /* width: 92vw;
+  margin-left: 3.7vw; */
+}
+
+.add-account-title-container {
+  background-color: #ABD9FF;
+  width: 92vw;
+}
+
+.account-info-container {
+  height: 1.5vw;
+}
+
+.account-info-text {
+  font-size: 13px;
+}
+
+.overview-name {
+  border-bottom: 1px solid blue;
+}

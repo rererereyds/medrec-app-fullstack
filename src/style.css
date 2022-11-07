@@ -1,0 +1,20 @@
+.logo-loader {
+    background: url('./images/MedRec-logo-and-name.png') no-repeat center center;
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background-color: rgba(255,255,255, 1);
+    z-index:9999;
+}
+
+.navbar-brand {
+    margin-left: 5%;
+}
+
+.homepage-user-details {
+    margin-top: 2%;
+}
+
+.users-table {
+    margin-top: 2%;
+}
