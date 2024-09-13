@@ -10,7 +10,7 @@ require('dotenv').config();
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: 'https://reyda-medrec-project-api-52786e85dd45.herokuapp.com'
+    // origin: 'https://reyda-medrec-project-api-52786e85dd45.herokuapp.com'
 }));
 
 //1 Connect to mongodb
