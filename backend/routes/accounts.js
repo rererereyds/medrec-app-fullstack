@@ -117,39 +117,70 @@ router.put("/edit-account/:id", (request, response) => {
 });
 
 router.put("/inactivate-account/:id", (request, response) => {
-  let error = new Error('AccountUpdateException');
-  error.message = 'Error in updating account';
+  // let error = new Error('AccountUpdateException');
+  // error.message = 'Error in updating account';
 
-  try {
-    const date = new Date().toLocaleString();
-    request.body.updatedAt = date;
-    request.body.status == "inactive"
+  // try {
+  //   const date = new Date().toLocaleString();
+  //   request.body.updatedAt = date;
+  //   request.body.status == "inactive"
 
-    Account.updateOne({ _id: request.params.id }, [{ $set: request.body}]).then((data) => {
-      console.log(data);
-      if (data.modifiedCount > 0) {
-        response.status(201).send({message: "Account Updated"});
+  //   Account.updateOne({ _id: request.params.id }, [{ $set: request.body}]).then((data) => {
+  //     console.log(data);
+  //     if (data.modifiedCount > 0) {
+  //       response.status(201).send({message: "Account Updated"});
+  //     } else {
+  //       throw error;
+  //     }
+  //   });
+  // } catch (exception) {
+  //   response.status(400).send({error: exception.message});
+  // }
+  const date = new Date().toLocaleString();
+  const updatedFields = {
+    updatedAt: date,
+    status: "inactive" // This sets the status to "inactive"
+  };
+
+  Account.updateOne({ _id: request.params.id }, { $set: updatedFields })
+    .then((result) => {
+      console.log(result);
+      if (result.modifiedCount > 0) {
+        response.status(200).send({ message: "Account Updated" }); // Use status 200 for successful updates
       } else {
-        throw error;
+        response.status(404).send({ message: "Account not found or no changes made" });
       }
+    })
+    .catch((error) => {
+      console.error(error);
+      response.status(500).send({ error: 'Error in updating account' }); // Handle unexpected errors
     });
-  } catch (exception) {
-    response.status(400).send({error: exception.message});
-  }
 });
 
 router.delete("/:id", (request, response) => {
-  try {
-    Account.deleteOne({ _id: request.params.id }).then((data) => {
+  // try {
+  //   Account.deleteOne({ _id: request.params.id }).then((data) => {
+  //     if (data.deletedCount > 0) {
+  //       response.status(202).send({message: "Account Deleted"});
+  //     } else {
+  //       throw error;
+  //     }
+  //   });
+  // } catch (exception) {
+  //   response.status(400).send({error: exception.message});
+  // }
+  Account.deleteOne({ _id: request.params.id })
+    .then((data) => {
       if (data.deletedCount > 0) {
-        response.status(202).send({message: "Account Deleted"});
+        response.status(202).send({ message: "Account Deleted" });
       } else {
-        throw error;
+        response.status(404).send({ message: "Account not found" });
       }
+    })
+    .catch((error) => {
+      console.error(error);
+      response.status(500).send({ error: 'Error in deleting account' });
     });
-  } catch (exception) {
-    response.status(400).send({error: exception.message});
-  }
 });
 
 /**
