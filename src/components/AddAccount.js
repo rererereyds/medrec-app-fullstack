@@ -116,7 +116,7 @@ const AddAccount = () => {
   const submitAccount = () => {
     axios
       .post(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/accounts`,
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/accounts`,
         user
       )
       .then((response) => {

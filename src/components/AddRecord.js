@@ -71,7 +71,7 @@ const AddRecord = () => {
     };
     axios
       .post(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/patient-records/${id}`,
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/patient-records/${id}`,
         recordReq
       )
       .then((response) => {

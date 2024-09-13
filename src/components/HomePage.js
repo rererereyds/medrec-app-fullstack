@@ -19,7 +19,7 @@ const HomePage = () => {
 
     axios
       .post(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/accounts/auth-user`,
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/accounts/auth-user`,
         { token: localStorage.getItem("userToken") }
       )
       .then((response) => {

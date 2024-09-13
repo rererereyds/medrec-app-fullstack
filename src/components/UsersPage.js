@@ -26,7 +26,7 @@ const UsersPage = () => {
   const getUsers = async () => {
     await axios
       .get(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/accounts/active`
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/accounts/active`
       )
       .then((response) => {
         if (response.data.length > 0) {

@@ -126,7 +126,7 @@ const SpecificPatient = () => {
 
     axios
       .get(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/patients/show-patient/${id}`
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/patients/show-patient/${id}`
       )
       .then((response) => {
         if (response.data.firstName && response.data.lastName) {
@@ -187,7 +187,7 @@ const SpecificPatient = () => {
     };
     axios
       .put(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/patients/edit-record/${id}`,
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/patients/edit-record/${id}`,
         patientReq
       )
       .then((response) => {

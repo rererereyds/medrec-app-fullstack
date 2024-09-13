@@ -29,7 +29,7 @@ const PatientRecord = () => {
 
     axios
       .get(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/patients/show-patient/${id}`
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/patients/show-patient/${id}`
       )
       .then((response) => {
         if (response.data.firstName && response.data.lastName) {
@@ -62,7 +62,7 @@ const PatientRecord = () => {
   const getMedicalRecords = async () => {
     await axios
       .get(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/patient-records`
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/patient-records`
       )
       .then((response) => {
         if (response.data.length > 0) {

@@ -83,7 +83,7 @@ const RecordTemplate = ({
     };
     axios
       .post(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/prescribed-medicine/${id}`,
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/prescribed-medicine/${id}`,
         prescribedMedicineReq
       )
       .then((response) => {
@@ -98,7 +98,7 @@ const RecordTemplate = ({
   const getPrescribedMedicines = async () => {
     await axios
       .get(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/prescribed-medicine`
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/prescribed-medicine`
       )
       .then((response) => {
         if (response.data.length > 0) {

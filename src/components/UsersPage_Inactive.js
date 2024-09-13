@@ -26,7 +26,7 @@ const UsersPage_Inactive = () => {
   const getUsers = async () => {
     await axios
       .get(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/accounts/inactive`
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/accounts/inactive`
       )
       .then((response) => {
         if (response.data.length > 0) {

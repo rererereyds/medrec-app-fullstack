@@ -17,7 +17,7 @@ const PatientsPage = () => {
 
   const getPatients = async () => {
     await axios
-      .get(`https://reyda-medrec-project-api.herokuapp.com/api/v1/patients`)
+      .get(`https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/patients`)
       .then((response) => {
         if (response.data.length > 0) {
           setPatients(response.data);

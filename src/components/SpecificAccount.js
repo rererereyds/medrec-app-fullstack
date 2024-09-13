@@ -114,7 +114,7 @@ const SpecificAccount = () => {
 
     axios
       .get(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/accounts/show-account/${id}`
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/accounts/show-account/${id}`
       )
       .then((response) => {
         if (response.data.firstName && response.data.lastName) {
@@ -165,7 +165,7 @@ const SpecificAccount = () => {
     };
     axios
       .put(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/accounts/edit-account/${id}`,
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/accounts/edit-account/${id}`,
         userReq
       )
       .then((response) => {
@@ -185,7 +185,7 @@ const SpecificAccount = () => {
 
     axios
       .put(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/accounts/inactivate-account/${id}`,
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/accounts/inactivate-account/${id}`,
         userStatus
       )
       .then((response) => {

@@ -143,7 +143,7 @@ const AddPatient = () => {
   const submitPatient = () => {
     axios
       .post(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/patients`,
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/patients`,
         patient
       )
       .then((response) => {
