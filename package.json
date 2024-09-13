@@ -1,5 +1,4 @@
 {
-  "proxy": "https://reyda-medrec-project-backend-46e1b19050e3.herokuapp.com/",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
