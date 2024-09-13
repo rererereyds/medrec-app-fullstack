@@ -23,7 +23,7 @@ const LogIn = () => {
 
     axios
       .post(
-        `https://reyda-medrec-project-api.herokuapp.com/api/v1/accounts/login`,
+        `https://reyda-medrec-project-api-52786e85dd45.herokuapp.com/api/v1/accounts/login`,
         loginDetails
       )
       .then((response) => {
@@ -102,7 +102,7 @@ const LogIn = () => {
                   type="text"
                   className="form-control border border-primary"
                   id="exampleInputEmail1"
-                  autocomplete="off"
+                  autoComplete="off"
                   value={accountUserName}
                   onChange={(e) => setUserName(e.target.value)}
                 />
