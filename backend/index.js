@@ -11,7 +11,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //1 Connect to mongodb
-const uri = "mongodb+srv://rererereyds:Mongodb12345@project6db.fcqd7kp.mongodb.net/usersdb";
+// const uri = "mongodb+srv://rererereyds:Mongodb12345@project6db.fcqd7kp.mongodb.net/usersdb";
+const uri = "mongodb+srv://reydabarroso:uIkx8HCWIRPrwBbY@records.qqvb3.mongodb.net/";
 mongoose.connect (uri);
 
 //3 Create landing page message
