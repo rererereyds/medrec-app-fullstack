@@ -8,7 +8,9 @@ require('dotenv').config();
 
 //5 Install body-parser and cors
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://reyda-medrec-project-api-52786e85dd45.herokuapp.com'
+}));
 
 //1 Connect to mongodb
 // const uri = "mongodb+srv://rererereyds:Mongodb12345@project6db.fcqd7kp.mongodb.net/usersdb";
