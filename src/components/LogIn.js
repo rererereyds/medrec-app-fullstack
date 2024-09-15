@@ -23,7 +23,7 @@ const LogIn = () => {
 
     axios
       .post(
-        `https://reyda-medrec-project-backend-46e1b19050e3.herokuapp.com/api/v1/accounts/login`,
+        `http://localhost:8080/api/v1/accounts/login`,
         loginDetails
       )
       .then((response) => {
