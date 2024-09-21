@@ -10,7 +10,9 @@ require('dotenv').config();
 app.use(bodyParser.json());
 
 app.use(cors({
-    // origin: 'https://reyda-medrec-project-api-52786e85dd45.herokuapp.com'
+    origin: 'http://localhost:3000', // Allow requests from this origin
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    credentials: true // Include credentials (cookies, authorization headers)
 }));
 
 //1 Connect to mongodb
