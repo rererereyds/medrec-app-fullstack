@@ -17,6 +17,7 @@ app.use(cors({
 // const uri = "mongodb+srv://rererereyds:Mongodb12345@project6db.fcqd7kp.mongodb.net/usersdb";
 const uri = "mongodb+srv://reydabarroso:uIkx8HCWIRPrwBbY@records.qqvb3.mongodb.net/";
 mongoose.connect (uri);
+mongoose.set('strictQuery', true);
 
 //3 Create landing page message
 app.get("/", (request, response) => {

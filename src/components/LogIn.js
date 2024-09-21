@@ -23,7 +23,7 @@ const LogIn = () => {
 
     axios
       .post(
-        `http://localhost:8080/api/v1/accounts/login`,
+        `https://medrec-backend-8e9d0a169d9c.herokuapp.com/v1/accounts/login`,
         loginDetails
       )
       .then((response) => {
