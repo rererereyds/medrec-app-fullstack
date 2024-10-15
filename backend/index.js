@@ -16,6 +16,30 @@ const uri = "mongodb+srv://reydabarroso:uIkx8HCWIRPrwBbY@records.qqvb3.mongodb.n
 mongoose.connect (uri);
 // mongoose.set('strictQuery', true);
 
+
+//Trying Vercel
+const fetch = require('node-fetch');
+
+const token = 'VrWosZnCewI8SS4GEQPBehIm'; // Replace with your actual token
+const url = 'https://medrec-app-fullstack-iptzi3xpm-reyds-projects.vercel.app/api/v1/accounts'; // Replace with the API endpoint you want to call
+
+async function fetchData() {
+    const response = await fetch(url, {
+        method: 'GET', // or 'POST', 'PUT', etc. depending on your request
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json' // If needed
+        }
+    });
+
+    const data = await response.json();
+    console.log(data);
+}
+
+fetchData();
+
+
+ 
 //3 Create landing page message
 app.get("/", (request, response) => {
     response.send(`Welcome to your Express App.`);
